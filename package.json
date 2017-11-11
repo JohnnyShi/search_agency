@@ -1,0 +1,32 @@
+{
+  "name": "search_agency",
+  "version": "1.0.0",
+  "description": "An Amne app to find all real-estate agencies within 10 miles given two addresses",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohnnyShi/search_agency.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "heroku"
+  ],
+  "author": "Yuan-Shi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JohnnyShi/search_agency/issues"
+  },
+  "homepage": "https://github.com/JohnnyShi/search_agency#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "morgan": "^1.9.0"
+  },
+  "engines": {
+    "node": "4.1.1"
+  }
+}
