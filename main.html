@@ -1,31 +1,42 @@
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFi9IPTzzrFm1y4iCQ3sgw5kS_jpFhu_g"></script>
-    <link type="text/css" rel="stylesheet" href="css/main.css" />
-    <script type = "text/javascript" src="js/placeFinder.js"></script>
-    <script>
-      $(function(){
-        var placeFinder = new placeFinder();
-      });
-    </script>
-  </head>
 
-  <body>
-    <form id = "address-form">
-      First address: <br />
-      <input type = "text" id = "address1"> <br />
-      Second address: <br />
-      <input type = "text" id = "address2"> <br />
-      <button>Search</button>
-    </form>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFi9IPTzzrFm1y4iCQ3sgw5kS_jpFhu_g&libraries=places"></script>
+  <script src="js/PlaceFinder.js"></script>
+  <script src="js/Map.js"></script>
+  <link type="text/css" rel="stylesheet" href="css/main.css" />
+  <script>
+    $(function(){
+      var placeFinder = new PlaceFinder();
+    });
+  </script>
+</head>
 
-    <div id = "results-wrapper">
-      Real estate agencies near the two addresses:
-      <ul id = "results">
-      </ul>
-    </div>
-  </body>
-</html>
+<body>
+  <div id = "main">
+    <search>
+      <div class="form-absolute">
+        <h2>Search real-estate agencies</h2>
+        <div>
+          <input class="input" id="addr1" type="text" placeholder="Enter address" />
+        </div>
+        <div>
+          <input class="input" id="addr2" type="text" placeholder="Enter address" />
+        </div>
+        <div>
+          <button class="button" id="search">Search</button>
+        </div>
+      </div>
+    </search>
+
+    <div id="map" class="mapdiv"></div>
+  </div>
+
+  <div id = "results-list">
+    Real estate agencies near the two addresses:
+    <ul id = "results">
+    </ul>
+  </div>
+</body>
